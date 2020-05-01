@@ -29,7 +29,8 @@
     "mquery": "3.0.0",
     "ms": "2.0.0",
     "regexp-clone": "0.0.1",
-    "sliced": "1.0.1"
+    "sliced": "1.0.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "acquit": "0.5.1",
@@ -65,7 +66,9 @@
     "lint": "eslint . --quiet",
     "nsp": "nsp check",
     "test": "mocha --exit test/*.test.js test/**/*.test.js",
-    "test-cov": "nyc --reporter=html --reporter=text npm test"
+    "test-cov": "nyc --reporter=html --reporter=text npm test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "main": "./index.js",
   "engines": {
@@ -124,5 +127,6 @@
       "space-infix-ops": "error",
       "space-unary-ops": "error"
     }
-  }
+  },
+  "snyk": true
 }
